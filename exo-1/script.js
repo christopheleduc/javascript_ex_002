@@ -5,7 +5,9 @@ console.log('exercice 1');
 // Cela permet de programmer et d'exploiter JavaScript plus facilement. De manipuler le DOM plus simplement qu'en Javascript.
 // Il y a aussi une notion de popularité historique spécifique qui explique son utilisation car il à permis de contourner de nombreux bug pendant un temps
 // liés à l'implémentation de ce dernier dans les navigateurs... Il existe de très nombreuses librairies, et la justification de son utilisation n'est plus
-// du tout évidente...
+// du tout évidente... Néanmoins, JQuery facilite la compatibilité entre les divers navigateurs, meme si leur homogéination tant à rendre son utilisation de
+// plus en plus obsolete. Les traces de son utilisation, notament en entreprise (maintenance du code, et habitudes de prog...) justifient une bonne maitrise de l'outil
+// pendant encore un certain temps.
 
 // Le Document Object Model (DOM) est une interface de programmation normalisée par le W3C, 
 // qui permet à des scripts d'examiner et de modifier le contenu du navigateur web. Je crois me rapeller que DOM s'appuie sur XML (un format ou plutot un paradigme
