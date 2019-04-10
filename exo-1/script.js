@@ -48,4 +48,4 @@ $(document).ready(function(){
 
 // 6) Quel symbole permet de repérer dans un programme Javascript que du JQuery est utilisé ? (attention, ce n'est pas toujours le cas...)
 
-// le symbole '$'.
+// le symbole '$' est un allias de "jQuery".
