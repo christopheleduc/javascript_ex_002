@@ -8,6 +8,10 @@ console.log('exercice 1');
 // du tout évidente... Néanmoins, JQuery facilite la compatibilité entre les divers navigateurs, meme si leur homogéination tant à rendre son utilisation de
 // plus en plus obsolete. Les traces de son utilisation, notament en entreprise (maintenance du code, et habitudes de prog...) justifient une bonne maitrise de l'outil
 // pendant encore un certain temps.
+// 1=> Compatibilité Naviguateurs
+// 2=> Manipulation DOM
+// 3=> Reactif aux évenements (avec un code compatible, donc plus léger)
+// 4=> Le reste c'est de la com...
 
 // Le Document Object Model (DOM) est une interface de programmation normalisée par le W3C, 
 // qui permet à des scripts d'examiner et de modifier le contenu du navigateur web. Je crois me rapeller que DOM s'appuie sur XML (un format ou plutot un paradigme
