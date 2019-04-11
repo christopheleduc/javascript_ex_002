@@ -25,9 +25,15 @@ $('footer p').replaceWith('<p><b>Copyright 2017</b></p>');
 // 6) modifiez le texte des paragraphes de la première ligne d'images. Tous les textes "Some text..." doivent être remplacés 
 // par "Mon projet"; Bonus: ajouter le numéro du projet c'est à dire 'Mon projet 1' 'Mon projet 2'...
 
+$('#work1 p').text(function(index){
 
+        return "Mon projet " + (index+1);
+
+    });
 
 // 7) choisissez une image sur internet et changez toutes les images du projet par cette image. Bonus: personnalisez chacune des images;
+
+$('img').attr('src', 'https://naturalhealth4life.org/img/products/24247-babaite-ours-s39amuser-dans-la-riviere-serviette-de-bain-50100-cm-70140-cm-70150-cm-80160-cm-plage-sechage-a-la-serviette-gant-de-toilette-maillots-de-bain-serviettes.jpg');
 
 // 8) vous venez de réaliser un nouveau projet et vous souhaitez le mettre sur votre portfolio. De plus, comme c'est le dernier,
 // vous souhaitez qu'il apparaisse au dessus des autres et qu'il soit plus grand pour être mis en valeur. Choisissez une 
