@@ -108,15 +108,23 @@ $('.nav>li:first-child');
 
 $("p:even");
 
-$('p').each(function(index, value){ 
-    if (index % 2 === 0) {
-        console.log(index);
+//$('p').each(function(index, value){
+    //var selection =[];
+    //if (index % 2 === 0) {
+        //console.log(index);
 
-        $('#local').append('<li class="child" rel="2"><a href="#anchor-'+index+'">'+$(this).html()+'</a></li>'); 
-        $(this).html('<a name="anchor-'+index+'">'+$(this).html()+'</a>');  
-    }
+        //$('#local').append('<li class="child" rel="2"><a href="#anchor-'+index+'">'+$(this).html()+'</a></li>'); 
+        //$(this).html('<a name="anchor-'+index+'">'+$(this).html()+'</a>');
+        //alert(index);
+        //$("p:eq(selection)");
+        //selection.push({count:index});
+    //}
+    //console.log(selection);
+    
+    //$("p:eq(3)");
 
- })
+ //})
+ //$("p:eq(selection)");
 
  
 
