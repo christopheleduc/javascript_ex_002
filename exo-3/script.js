@@ -39,6 +39,8 @@ $('img').attr('src', 'https://naturalhealth4life.org/img/products/24247-babaite-
 // vous souhaitez qu'il apparaisse au dessus des autres et qu'il soit plus grand pour être mis en valeur. Choisissez une 
 // image et un texte et ajoutez le au-dessous de "Some of my work". Ajustez la taille de l'image pour être de 250px de haut;
 
-$('.jumbotron').after('<br><div class="container-fluid bg-3 text-center"><div class="row"><div class="col-sm-4"></div><div class="col-sm-4">' + $('#work1 p:last').get(0).outerHTML + $('#work1 img:last').get(0).outerHTML + '<div class="col-sm-4"></div></div></div></div>');
+$('.jumbotron').after('<br><div class="container-fluid bg-3 text-center"><div class="row"><div class="col-sm-2"></div><div class="col-sm-6">' + $('#work1 p:last').get(0).outerHTML + $('#work1 img:last').get(0).outerHTML + '<div class="col-sm-2"></div></div></div></div>');
 
 // 9) la classe intro a été définie dans le fichier 'index.css'. Ajoutez cette classe au footer afin de changer l'affichage en rouge.
+
+$('footer').replaceWith('<footer class="intro container-fluid text-center"><p><b>Copyright 2017</b></p></footer>');
