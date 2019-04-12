@@ -126,6 +126,8 @@ $("p:even");
  //})
  //$("p:eq(selection)");
 
+ // Copyright ElDuke3D 2020
+
  
 
 
