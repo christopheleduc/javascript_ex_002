@@ -131,28 +131,85 @@ $('.navbar-right li:last-child').click(function (e) {
     
 //     });
 
- $(function(){
-     let dans_le_input = false;
-     $('.form-control').mousedown(
-         function(){
+  $(function(){
+      //let dans_le_input = false;
+      $('.form-control').mousedown(
+          function(){
              alert('On à cliqué dans le champ !!! ');
-             dans_le_input = true;
-         }  
-      );
-
-      if(dans_le_input = true){
-        $('.form-control').bind('keypress', function(e) {
-            let code = (e.keyCode ? e.keyCode : e.which);
-            //if(code == 13) { //La touche Entrée a été appuyée
-            //let codeAscii = String.charCodeAt(e.keyCode ? e.keyCode : e.which); //La variable code reçoit le chiffre ASCII.
-            let lettre = String.fromCharCode(code);
-            alert('On ecrit la lettre: \"' + lettre + '\" , ' + 'qui correspond au code: \"' + code + '\" !');
-            
-            });
-      };
- });
+             $('.form-control').bind('keypress', function(e) {
+                 let code = (e.keyCode ? e.keyCode : e.which);
+                 //if(code == 13) { //La touche Entrée a été appuyée
+                 //let codeAscii = String.charCodeAt(e.keyCode ? e.keyCode : e.which); //La variable code reçoit le chiffre ASCII.
+                 let lettre = String.fromCharCode(code);
+                 alert('On ecrit la lettre: \"' + lettre + '\" , ' + 'qui correspond au code: \"' + code + '\" !');  
+             });     
+          });
+     });
 
 
 // 7) Bonus ++ : récupérer le nombre de produits que l'utilisateur a achetés.
 // Par exemple si l'utilisateur clique sur l'image ipad alors 'Cart' doit être remplacé par 'Cart(25)' puisque l'offre correspond à 25 ipads...
 
+// 8) Utiliser un plugin JQuery:
+
+// Feu d'artifesse plugin:
+
+//  $('body').keypress, function(e) {
+//      let keyboard = $('body').val();
+//      //if(code == 13) { //La touche Entrée a été appuyée
+//      //let codeAscii = String.charCodeAt(e.keyCode ? e.keyCode : e.which); //La variable code reçoit le chiffre ASCII.
+//      let frappe = String.fromCharCode(e.keyCode);
+//     //  if(e.which>=0 && e.which<=272){
+//     //     e.preventDefault();
+//     //     keyboard+=frappe;
+//     //  }
+//      alert('On ecrit la lettre: \"' + keyboard );
+//      //$('#target').val(keyboard);
+      
+//  };
+
+let combinaison = []; // tableau pour enregister la combinaison de touches
+
+    $('body').bind('keydown', function(e) { // Fonction (param: e)
+        let code = (e.keyCode ? e.keyCode : e.charCode); // capture les codes ascii
+        let lettre = String.fromCharCode(code); // retient les code converti en caracteres pour affichage éventuel
+            if (code == '38' && combinaison.length == 0 || code == '38' && combinaison.length == 1 ){ // test "haut" et "bas" uniquement
+                combinaison.push(code); // si oui, push dans le tableau
+                    }
+            if (code == '40' && combinaison.length == 2){ // test "haut" et "bas" uniquement
+                combinaison.push(code); // si oui, push dans le tableau
+                    }
+
+        console.log(combinaison); // Verification/debug
+            if (combinaison[0] == '38' && combinaison[1] == '38' && combinaison[2] == '40'){ // test combinaison
+                console.info(code); // Verification/debug
+                alert('On ecrit la lettre: \"' + lettre + '\" , ' + 'qui correspond au code: \"' + code + '\" !'); // just for fun!!!
+                // Do something here !
+                //console.log('combinaison'); // Verification/debug
+                combinaison = []; // remet le tableau à zero si test réussit !
+                    }
+    }); 
+
+
+// Autocompletion plugin:
+
+ $( function() {
+    var liste = [
+        "Christophe",
+        "Salut",
+        "SHA256",
+        "Hacker",
+        "Maître"
+    ];
+
+    $('#recherche').autocomplete({
+        source : liste
+    });
+});
+
+// Confetti bouton !!!
+$(function(){
+    $('.btn-toto').confettiButton({
+        hoverOnly: true
+    });
+});
