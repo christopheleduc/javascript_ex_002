@@ -17,7 +17,9 @@
     <link href="jquery.vnm.confettiButton.css" rel="stylesheet" type="text/css"> -->
         <!--Fontawesome CDN-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    	<!--Custom styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
     <!-- <style>
      body { background-color: #333; font-family: 'Roboto'; }
@@ -57,7 +59,7 @@
                                 <input type="checkbox">Remember Me
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Se connecter" class="btn float-right login_btn" id="Submit_01">
+                                <input type="button" value="Se connecter" class="btn float-right login_btn" id="Submit_01">
                             </div>
                         </form>
                     </div>
@@ -67,6 +69,10 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <a href="#">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div id="alertMessages"> 
                         </div>
                     </div>
                 </div>
