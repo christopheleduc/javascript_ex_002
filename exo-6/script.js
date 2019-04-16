@@ -25,6 +25,8 @@ console.log("exercice 6");
 // à rentrer au minimum 6 lettres. Ajustez le message en fonction;
 // 4. vérifiez maintenant que le champ email comporte bien une adresse email, sinon afficher un message à l'utilisateur. 
 // ( Remarque : il va falloir trouver comment vérifier qu'une chaine de charactères est un email... google est votre ami... );
+// 5. Maintenant faites en sorte que si l'utilisateur rentre 'hello@me.com' dans l'email 
+// et 'secret8' dans le mot de passe alors un message de confirmation apparait : 'Vous êtes connecté'
 
 
 
@@ -39,35 +41,36 @@ $(document).ready(function(){ //ecoute
                 method: "sha1",
                 source: pass
             })
-                console.log("L'utilisateur est: [ "+user+" ] / Le Hash (SHA1) de [ " + pass + " ] est: [ " + strMD5 + " ]"); // Affiche le USER, le PASSWORD et le HASH dans la console
-                alert( 'User : '+user+' / Hash (SHA1) du mot de pass : '+strMD5); // Affiche le USER et le HASH dans le DOM
-            } else { // Sinon ALERT !!!
-                $.alert({theme:'modern', title: 'Alert!',content: 'Please you need to enter a VALID email !!!',}); // on dit: "ça suffit maintenant!!!
-            }
+            if (user=='hello@me.com' && strMD5=='3d4b1eb1242d72e794baa62585277057a75ba176'){
+                $.alert({theme:'supervan', title: 'Alert!', content: 'Vous êtes connecté !',});
+            } else {
+                    console.log("L'utilisateur est: [ "+user+" ] / Le Hash (SHA1) de [ " + pass + " ] est: [ " + strMD5 + " ]"); // Affiche le USER, le PASSWORD et le HASH dans la console
+                    alert( 'User : '+user+' / Hash (SHA1) du mot de pass : '+strMD5); // Affiche le USER et le HASH dans le DOM
+                    }
+                } else { // Sinon ALERT !!!
+                    $.alert({theme:'modern', title: 'Alert!', content: 'Please you need to enter a VALID email !!!',}); // on dit: "ça suffit maintenant!!!
+                }      
         }
     else if (user.length == 0 && pass.length == 0) { // verifie qu'on fait pas n'importe koi...
         //$('#alertMessages').replaceWith('<div class="alert alert-warning" role="alert">Please enter your email adress !</div>');
-        $.alert({theme:'modern', title: 'Alert!',content: 'Please you need to enter an email adress !',}); // on dit: "ça suffit maintenant!!!
+        $.alert({theme:'modern', title: 'Alert!', content: 'Please you need to enter an email adress !',}); // on dit: "ça suffit maintenant!!!
         }
     else if ( user.length > 0 && pass.length < 6 ) { // verifie qu'on fait pas n'importe koi encore!
         //$('#alertMessages').replaceWith('<div class="alert alert-warning" role="alert">Please enter six character min for the password please! !</div>');
-        $.alert({theme:'modern', title: 'Alert!',content: 'Enter six characters min for the password please !',}); // Faut pas pousser mamie dans les orties non-plus!!!
+        $.alert({theme:'modern', title: 'Alert!', content: 'Enter six characters min for the password please !',}); // Faut pas pousser mamie dans les orties non-plus!!!
         }
     else { // Est-il bien utile d'en arriver à de tels extreme ?
         //$('#alertMessages').replaceWith('<div class="alert alert-warning" role="alert">Please enter your email adress !</div>');
-        $.alert({theme:'supervan', title: 'Alert!',content: 'Please you MUST enter your email adress AND the password !',}); // Là je déprime !!!
+        $.alert({theme:'supervan', title: 'Alert!', content: 'Please you MUST enter your email adress AND the password !',}); // Là je déprime !!!
         }
     });
 });
 
-// var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 
-
-// if (testEmail.test(user)){
-        
+// if (user=='hello@me.com' && strMD5=='3d4b1eb1242d72e794baa62585277057a75ba176'){
+//     $.alert({theme:'supervan', title: 'Alert!', content: 'Vous êtes connecté !',});
 // }
 
-// if (testEmail.test(valueToTest))
-//     // Do whatever if it passes.
-// else
-//     // Do whatever if it fails.
+// 3d4b1eb1242d72e794baa62585277057a75ba176
+// hello@me.com
+// 'secret8'
