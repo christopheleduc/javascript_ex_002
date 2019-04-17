@@ -37,7 +37,7 @@ $(document).ready(function(){ //ecoute
         var pass=$('#InputPass_01').val(); // prend valeur input password
     if (user.length > 0 && pass.length > 5) { // 6 caractères minpour le password
         if (testEmail.test(user)){ // On test la validité de l'E-Mail
-            var strMD5 = $().crypt({ // On ne stock JAMMAIS un mot de pass; on le hash et on garde la clé publique pour verif ulterieur
+            var strMD5 = $().crypt({ // On ne stock JAMMAIS un mot de pass; on le hash et on le stock, en general dans une BDD, pour verif ulterieur
                 method: "sha1",
                 source: pass
             })
