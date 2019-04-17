@@ -162,3 +162,4 @@ Exemple de plugins :
 **Bingo**: Recoder les plugins que vous avez choisis.
 
 # javascript_ex_002
+ferer
